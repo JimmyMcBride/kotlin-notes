@@ -1,10 +1,16 @@
 package geometry.utils
 
+/**
+ * Describes the common interface between all types of units
+ */
 interface Units {
     val unitName: String
 }
 
-enum class Standard(val text: String) : Units {
+/**
+ * A system of measurement in use in the United Kingdom and other Commonwealth countries consisting of units such as the inch, the mile and the pound (a unit of weight).
+ */
+enum class Imperial(val text: String) : Units {
     INCHES("inch(es)") {
         override val unitName = text
     },
@@ -16,6 +22,9 @@ enum class Standard(val text: String) : Units {
     }
 }
 
+/**
+ * A decimal system of units based on the meter as a unit length, the kilogram as a unit mass, and the second as a unit time.
+ */
 enum class Metric(val text: String) : Units {
     CENTIMETERS("centimeter(s)") {
         override val unitName = text

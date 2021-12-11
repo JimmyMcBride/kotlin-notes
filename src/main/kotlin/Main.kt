@@ -1,16 +1,16 @@
 import geometry.Rectangle
 import geometry.utils.Metric
-import geometry.utils.Standard
+import geometry.utils.Imperial
 
 fun main() {
     geometryScratchpad()
 }
 
 fun geometryScratchpad() {
-    val rec1 = Rectangle(5F, 6.5F, Standard.INCHES)
+    val rec1 = Rectangle(5F, 6.5F, Imperial.INCHES)
     println("Rectangle1 perimeter: ${rec1.perimeter()} ${rec1.getUnitName()}")
     println("Changing shape unit...")
-    rec1.changeUnit(Standard.MILES)
+    rec1.changeUnit(Imperial.MILES)
     println("Updated Rectangle1 perimeter: ${rec1.perimeter()} ${rec1.getUnitName()}")
     println("Rectangle1 special type: ${rec1.specialType()}")
 
@@ -25,7 +25,7 @@ fun geometryScratchpad() {
 
     println("\n")
 
-    val rec3 = Rectangle(2F, 3.236F, Standard.YARDS)
+    val rec3 = Rectangle(2F, 3.236F, Imperial.YARDS)
     println("Rectangle3 perimeter: ${rec3.perimeter()} ${rec3.getUnitName()}")
     println("Changing shape unit...")
     rec3.changeUnit(Metric.CENTIMETERS)
